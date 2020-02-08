@@ -5,13 +5,10 @@ const Home = () => {
   const [contact, setContact] = useState({
     name: '',
     email: '',
-    subject: 'StaticForms - Contact Form',
-    honeypot: '', // if any value received in this field, form submission will be ignored.
+    subject: '',
     message: '',
-    replyTo: '@', // this will set replyTo of email to email address entered in the form
-    accessKey: 'you-access-key' // get your access key from https://www.staticforms.xyz
-  });
-
+    replyTo: '', // this will set replyTo of email to email address entered in the form
+    accessKey: 'bf0a33e6-7e74-401a-bb42-ee0e8b5688f7' 
   const [response, setResponse] = useState({
     type: '',
     message: ''
@@ -98,35 +95,19 @@ const Home = () => {
                         />
                       </div>
                     </div>
-                    <div className='field'>
-                      <label className='label'>Pic</label>
-                      <div className='control'>
-                        <input
-                          className='image'
-                          type='image'
-                          placeholder='pic'
-                          name='pic'
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className='field' style={{ display: 'none' }}>
-                      <label className='label'>Title</label>
-                      <div className='control'>
-                        <input
-                          type='text'
-                          name='honeypot'
-                          style={{ display: 'none' }}
-                          onChange={handleChange}
-                        />
-                        <input
-                          type='hidden'
-                          name='subject'
-                          onChange={handleChange}
-                        />
-                      </div>
-                    </div>
+  <div className='field'>
+                                            <label className='label'>Pic</label>
+                                            <div className='previewComponent'>
+                                                <input
+                                                    className='fileInput'
+                                                    type='file'
+                                                    placeholder='pic'
+                                                    name='pic'
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
                     <div className='field'>
                       <label className='label'>Message</label>
                       <div className='control'>
