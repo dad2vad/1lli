@@ -99,13 +99,13 @@ const Home = () => {
                       </div>
                     </div>
                     <div className='field'>
-                      <label className='label'>Your Email</label>
+                      <label className='label'>Pic</label>
                       <div className='control'>
                         <input
-                          className='input'
-                          type='email'
-                          placeholder='Email'
-                          name='email'
+                          className='image'
+                          type='image'
+                          placeholder='pic'
+                          name='pic'
                           onChange={handleChange}
                           required
                         />
